@@ -50,7 +50,7 @@ services:
       - "./healthchecks:/healthchecks"
     healthcheck:
       test: /healthchecks/redis.sh
-      interval: "5s"
+      interval: "120s"
     ports: ["6379"]
     networks:
       - back-tier
@@ -65,7 +65,7 @@ services:
       - "./healthchecks:/healthchecks"
     healthcheck:
       test: /healthchecks/postgres.sh
-      interval: "5s"
+      interval: "120s"
     networks:
       - back-tier
 
