@@ -5,8 +5,6 @@
 services:
   vote:
     image: vote:lts
-    # use python rather than gunicorn for local dev
-    command: python app.py
     depends_on:
       - redis 
     volumes:
@@ -19,8 +17,6 @@ services:
 
   result:
     image: result:lts
-    # use nodemon rather than node for local dev
-    command: nodemon server.js
     depends_on:
       - db
     volumes:
